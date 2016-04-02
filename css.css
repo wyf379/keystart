@@ -29,10 +29,6 @@ a {
     text-decoration: none;
 }
 
-html {
-    background: url(images/bg.gif);
-}
-
 body {
     font: 12px 'Microsoft YaHei',SimSun,Helvetica,Tahoma,Arial,sans-serif!important;
     color: #666;
