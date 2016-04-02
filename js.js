@@ -1,9 +1,9 @@
 if ( 'OVER' != getCookie("FIRSTTIME") ) {
-    setCookie("_B", "http://www.baidu.com");
-    setCookie("_G", "http://www.google.com");
+    setCookie("_B", "https://www.baidu.com");
+    setCookie("_G", "https://www.google.com");
     setCookie("_Q", "http://www.qq.com");
-    setCookie("_T", "http://www.taobao.com");
-    setCookie("_V", "http://www.v2ex.com");    
+    setCookie("_T", "https://www.taobao.com");
+    setCookie("_V", "https://www.v2ex.com");    
     setCookie("_W", "http://www.weibo.com");
     setCookie("_Y", "http://www.youku.com");
     setCookie("FIRSTTIME", "OVER");
@@ -28,7 +28,7 @@ $(document).keyup(function(ev) {
     if (urlcache[code] == '' || typeof(urlcache[code]) == 'undefined') {
         $("#message").html('找不到这个按键的配置,注意切换您的输入法哦~~~');
         setTimeout('$("#message").html("");', 2000)
-    } else window.location.href = urlcache[code];
+    } else window.open(urlcache[code]);
 });
 
 $("#main li").mouseenter(function() {
@@ -42,7 +42,7 @@ $("#main li").mouseenter(function() {
 $("#main li").click(function() {
     var code = $(this).attr('id').replace('LI_', '');
     if (urlcache[code] != '' && typeof(urlcache[code]) != 'undefined') {
-        window.location.href = urlcache[code];
+        window.open(urlcache[code]);
     }
 });
 
